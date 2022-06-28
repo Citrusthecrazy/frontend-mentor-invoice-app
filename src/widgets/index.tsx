@@ -1,3 +1,3 @@
 import Header from "./Header/Header";
-
-export { Header };
+import NoInvoices from "./NoInvoices/NoInvoices";
+export { Header, NoInvoices };

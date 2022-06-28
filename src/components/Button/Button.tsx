@@ -9,7 +9,7 @@ interface IButton {
 const Button: FC<IButton> = ({ className, children, icon = false }) => {
   return (
     <button
-      className={`flex flex-row gap-4 items-center justify-center bg-darkPurple 
+      className={`flex flex-row gap-2 items-center justify-center bg-darkPurple 
                   ${
                     icon ? "pl-2 pr-4 py-2" : "px-6 py-2"
                   } rounded-full text-white font-semibold text-[12px] 

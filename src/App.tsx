@@ -5,7 +5,7 @@ import { Header } from "./widgets";
 import { Home, InvoiceDetails } from "./pages";
 function App() {
   return (
-    <div className="bg-lightGray dark:bg-veryDarkBlue h-screen">
+    <div className="relative bg-lightGray dark:bg-veryDarkBlue h-screen overflow-y-auto">
       <Router>
         <Header />
         <Routes>

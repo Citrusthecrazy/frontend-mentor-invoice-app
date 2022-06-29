@@ -7,7 +7,7 @@ import { IThemeContext } from "../../util/types";
 const Header = () => {
   const { toggleTheme } = useContext(ThemeContext) as IThemeContext;
   return (
-    <div className="fixed h-[4.5rem] top-0 left-0 right-0 bg-darkBlue dark:bg-darkerBlue flex flex-row text-white justify-between">
+    <div className="absolute h-[4.5rem] top-0 left-0 right-0 bg-darkBlue dark:bg-darkerBlue flex flex-row text-white justify-between">
       <div className="h-full grid place-content-center w-[4.5rem] bg-purple rounded-r-[20px]">
         <img src={logo} alt="logo" className=" h-7 w-7 hover:cursor-pointer" />
       </div>

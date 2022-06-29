@@ -5,7 +5,7 @@ const BackButton = () => {
   return (
     <Link
       to="/"
-      className="flex flex-row gap-6 justify-start items-baseline dark:text-white">
+      className="flex flex-row mx-6 gap-6 justify-start items-baseline dark:text-white">
       <img src={arrowLeft} alt="arrow left" />
       <span className="font-bold">Go Back</span>
     </Link>

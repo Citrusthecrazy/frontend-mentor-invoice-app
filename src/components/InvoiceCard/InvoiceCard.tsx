@@ -1,6 +1,8 @@
 import moment from "moment";
 import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { capitalizeFirstLetter, numberWithCommas } from "../../util/Formatters";
+import InvoiceStatus from "../InvoiceStatus/InvoiceStatus";
 
 interface IInvoiceCard {
   id: string;
@@ -17,8 +19,9 @@ const InvoiceCard: FC<IInvoiceCard> = ({
   amount,
   status,
 }) => {
+  const navigate = useNavigate()
   return (
-    <div className="bg-white rounded-lg flex flex-row justify-between p-6 hover:cursor-pointer dark:bg-darkerBlue dark:text-white">
+    <div className="bg-white rounded-lg flex flex-row justify-between p-6 hover:cursor-pointer dark:bg-darkerBlue dark:text-white" onClick={() => navigate(`/invoice/${id}`)}>
       <div className="flex flex-col gap-6">
         <p className="text-gray-500 font-bold">
           #
@@ -35,27 +38,7 @@ const InvoiceCard: FC<IInvoiceCard> = ({
         <p className="text-gray-500 font-medium tracking-[-0.25px] dark:text-white">
           {customerName}
         </p>
-        <div
-          className={`font-bold rounded-md h-full flex flex-row min-w-[104px]
-                          max-h-10
-                          items-center justify-center gap-2 ${
-                            status === "paid"
-                              ? "bg-paleGreen text-brightGreen "
-                              : status == "pending"
-                              ? "bg-paleOrange text-brightOrange"
-                              : "bg-dirtyWhite text-darkBlue"
-                          }`}>
-          <div
-            className={`w-2 h-2 ${
-              status === "paid"
-                ? "bg-brightGreen"
-                : status === "pending"
-                ? "bg-brightOrange"
-                : "bg-darkBlue"
-            }  rounded-full`}
-          />
-          <span>{capitalizeFirstLetter(status)}</span>
-        </div>
+        <InvoiceStatus status={status}/>
       </div>
     </div>
   );

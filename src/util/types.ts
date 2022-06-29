@@ -40,3 +40,7 @@ export interface IThemeContext {
 export interface IThemeProvider {
   children: any;
 }
+export interface IStatus{
+  status:string
+  className?:string
+}

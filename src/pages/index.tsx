@@ -1,3 +1,3 @@
 import Home from "./Home/Home";
-
-export { Home };
+import InvoiceDetails from "./InvoiceDetails/InvoiceDetails";
+export { Home,InvoiceDetails };

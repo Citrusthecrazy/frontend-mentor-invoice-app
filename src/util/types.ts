@@ -33,3 +33,10 @@ interface Item {
   price: number;
   total: number;
 }
+
+export interface IThemeContext {
+  toggleTheme: () => void;
+}
+export interface IThemeProvider {
+  children: any;
+}

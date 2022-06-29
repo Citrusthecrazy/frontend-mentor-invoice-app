@@ -5,11 +5,15 @@ import { Invoice } from "../../util/types";
 import { NoInvoices } from "../../widgets";
 const Home = () => {
   return (
-    <div className="pt-[6.5rem] pb-6 px-6">
+    <div className="pt-[6.5rem] pb-6 px-6 h-full overflow-y-auto">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col justify-end items-start">
-          <h1 className=" font-bold text-[20px] leading-5">Invoices</h1>
-          <p className=" font-light text-gray-400">{data.length} invoices</p>
+          <h1 className=" font-bold text-[20px] leading-5 dark:text-white">
+            Invoices
+          </h1>
+          <p className=" font-light text-gray-400 dark:text-white">
+            {data.length} invoices
+          </p>
         </div>
         <div className="flex flex-row justify-center items-center gap-4">
           <Filter />

@@ -4,13 +4,13 @@ const NoInvoices = () => {
   return (
     <div className="flex flex-col justify-center items-center px-[45px] pt-[102px]">
       <img src={empty} alt="girl" />
-      <h1 className="font-bold text-[1.5rem] mt-10 mb-5">
+      <h1 className="font-bold text-[1.5rem] mt-10 mb-5 dark:text-white">
         There is nothing here
       </h1>
-      <p className="text-center text-gray-300 font-medium">
+      <p className="text-center text-gray-300 dark:text-white font-medium">
         Create an invoice by clicking the{" "}
-        <span className="text-gray-500 font-bold">New</span> button and get
-        started
+        <span className="text-gray-500 dark:text-white font-bold">New</span>{" "}
+        button and get started
       </p>
     </div>
   );

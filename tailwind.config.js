@@ -22,6 +22,7 @@ module.exports = {
         paleOrange: "rgba(255,143,0,0.06)",
         brightOrange: "#FF8F00",
         dirtyWhite: "rgba(55,59,83,0.06)",
+        black: "#0C0E16",
       },
     },
   },

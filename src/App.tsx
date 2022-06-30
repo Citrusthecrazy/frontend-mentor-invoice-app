@@ -9,8 +9,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route element={<Home />} path="*" />
           <Route element={<InvoiceDetails />} path="/invoice/:id" />
+          <Route element={<Home />} path="*" />
         </Routes>
       </Router>
     </div>

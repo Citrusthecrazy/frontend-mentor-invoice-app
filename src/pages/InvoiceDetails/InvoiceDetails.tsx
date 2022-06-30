@@ -97,8 +97,8 @@ const InvoiceDetails = () => {
           </div>
         </div>
       )}
-      <div className="flex flex-row items-center justify-center gap-2 bg-white py-5">
-        <Button className="text-md py-4 bg-dirtyWhite text-veryLightBlue">
+      <div className="flex flex-row items-center justify-center gap-2 bg-white py-5 dark:bg-darkBlue">
+        <Button className="text-md py-4 bg-dirtyWhite text-veryLightBlue dark:bg-veryDarkBlue">
           Edit
         </Button>
         <Button className="text-md py-4 bg-red">Delete</Button>

@@ -1,6 +1,6 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BackButton, Button, InvoiceStatusCard } from "../../components";
 import data from "../../data.json";
 import { Invoice } from "../../util/types";
@@ -8,6 +8,7 @@ import { Invoice } from "../../util/types";
 const InvoiceDetails = () => {
   const [invoice, setInvoice] = useState<Invoice | null>(null);
   const { id } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     if (!id) return;
     setInvoice(getInvoiceById(id));
@@ -75,8 +76,8 @@ const InvoiceDetails = () => {
             <p className="font-bold text-xl">{invoice.clientEmail}</p>
           </div>
           <div className="bg-gray-100 p-6 rounded-t-lg overflow-hidden mt-10 dark:bg-lightBlue">
-            {invoice.items.map((item) => (
-              <div className="flex flex-row justify-between">
+            {invoice.items.map((item, index) => (
+              <div key={index} className="flex flex-row justify-between">
                 <div className="flex flex-col">
                   <span className="font-bold">{item.name}</span>
                   <span className="text-gray-400 font-bold">
@@ -97,11 +98,16 @@ const InvoiceDetails = () => {
           </div>
         </div>
       )}
-      <div className="flex flex-row items-center justify-center gap-2 bg-white py-5">
-        <Button className="text-md py-4 bg-dirtyWhite text-veryLightBlue">
+      <div className="flex flex-row items-center justify-center gap-2 bg-white py-5 dark:bg-darkerBlue">
+        <Button
+          variant="white"
+          className="text-md py-4 "
+          onClick={() => navigate(`/invoice/${id}/edit`)}>
           Edit
         </Button>
-        <Button className="text-md py-4 bg-red">Delete</Button>
+        <Button variant="red" className="text-md py-4">
+          Delete
+        </Button>
         <Button className="text-md py-4">Mark as Paid</Button>
       </div>
     </div>

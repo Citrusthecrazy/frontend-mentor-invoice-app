@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./widgets";
-import { Home, InvoiceDetails } from "./pages";
+import { EditInvoice, Home, InvoiceDetails } from "./pages";
 function App() {
   return (
     <div className="relative bg-lightGray dark:bg-veryDarkBlue h-screen overflow-y-auto">
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route element={<Home />} path="*" />
           <Route element={<InvoiceDetails />} path="/invoice/:id" />
+          <Route element={<EditInvoice />} path="/invoice/:id/edit" />
         </Routes>
       </Router>
     </div>

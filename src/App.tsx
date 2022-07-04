@@ -9,7 +9,6 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route element={<Home />} path="*" />
           <Route element={<InvoiceDetails />} path="/invoice/:id" />
           <Route element={<EditInvoice />} path="/invoice/:id/edit" />
         </Routes>

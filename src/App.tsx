@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route element={<InvoiceDetails />} path="/invoice/:id" />
           <Route element={<EditInvoice />} path="/invoice/:id/edit" />
+          <Route element={<Home/>} path="/"/>
         </Routes>
       </Router>
     </div>

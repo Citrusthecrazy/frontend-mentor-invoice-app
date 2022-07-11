@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { BackButton } from "../../components";
+import { BackButton, InputGroup, TextBox } from "../../components";
 
 const EditInvoice = () => {
   const { id } = useParams();
@@ -11,6 +11,19 @@ const EditInvoice = () => {
         {id}
       </h1>
       <h2 className="mx-6 mt-6 text-md font-bold text-purple">Bill from</h2>
+      <InputGroup className="mx-6 mb-6">
+        <label className="text-gray-500">Street address</label>
+        <TextBox type="text"/>
+      </InputGroup>
+      <div className="flex flex-row mb-6">
+        <InputGroup className="mx-6">
+          <label className="text-gray-500">City</label>
+          <TextBox type="text"/>
+        </InputGroup>      <InputGroup className="mx-6">
+          <label className="text-gray-500">Post Code</label>
+          <TextBox type="text"/>
+        </InputGroup>
+      </div>
     </div>
   );
 };

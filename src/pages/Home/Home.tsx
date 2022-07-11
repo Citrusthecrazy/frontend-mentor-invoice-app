@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
 import { Button, Filter, InvoiceCard } from "../../components";
 import data from "../../data.json";
 import { Invoice } from "../../util/types";
 import { NoInvoices } from "../../widgets";
 const Home = () => {
   return (
-    <div className="pt-[6.5rem] pb-6 px-6 h-full overflow-y-auto">
+    <div className="pt-[6.5rem] pb-6 px-6 h-full">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col justify-end items-start">
           <h1 className=" font-bold text-[20px] leading-5 dark:text-white">

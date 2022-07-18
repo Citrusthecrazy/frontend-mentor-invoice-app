@@ -1,3 +1,3 @@
-#WIP
+# WIP
 
-##Frontend mentor invoice app by Marko Drakulic
+## Frontend mentor invoice app by Marko Drakulic
